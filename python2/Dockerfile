@@ -29,6 +29,8 @@ ADD run_ipython.sh /home/ds
 RUN chmod +x /home/ds/run_ipython.sh
 RUN chown ds /home/ds/run_ipython.sh
 
+ADD .bashrc.template /home/ds/.bashrc
+
 EXPOSE 8888
 USER ds
 RUN mkdir -p /home/ds/notebooks
