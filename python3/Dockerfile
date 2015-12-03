@@ -30,6 +30,8 @@ RUN chown ds /home/ds/run_ipython.sh
 ADD .bashrc.template /home/ds/.bashrc
 
 EXPOSE 8888
+RUN usermod -a -G sudo ds
+RUN echo "ds ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 USER ds
 RUN mkdir -p /home/ds/notebooks
 ENV HOME=/home/ds
