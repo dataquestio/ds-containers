@@ -14,3 +14,4 @@ networkx
 theano
 requests
 beautifulsoup4
+xlrd
